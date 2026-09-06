@@ -150,6 +150,7 @@ main() {
         mv '$APP_DIR/Roblox.app/Contents/MacOS/libmimalloc.3.dylib_patched' \
            '$APP_DIR/Roblox.app/Contents/MacOS/libmimalloc.3.dylib' &&
         rm -rf '$APP_DIR/Roblox.app/Contents/MacOS/RobloxPlayerInstaller.app' &&
+        rm -rf '$APP_DIR/Roblox.app/Contents/MacOS/RobloxMenuBar.app' &&
         codesign --force --deep --sign - '$APP_DIR/Roblox.app' &&
 
         curl -# -L '$UI_URL' -o '$TEMP/ui.zip' &&
